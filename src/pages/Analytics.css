@@ -1,0 +1,111 @@
+.ana-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.ana-kpi {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ana-kpi-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+}
+
+.ana-kpi-value {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.ana-kpi-change { font-size: 12px; font-weight: 500; }
+.ana-kpi-change.up   { color: var(--green); }
+.ana-kpi-change.down { color: var(--red); }
+
+.ana-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.ana-chart { overflow: hidden; }
+
+.ana-chart-header {
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.top-products-list {
+  padding: 8px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.top-product-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tp-rank {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  width: 22px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.tp-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  width: 200px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tp-bar-wrap {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-base);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.tp-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 100px;
+  transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+
+.tp-revenue {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  width: 110px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .ana-kpis { grid-template-columns: repeat(2, 1fr); }
+  .ana-charts { grid-template-columns: 1fr; }
+  .tp-name { width: 130px; }
+}

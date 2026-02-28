@@ -1,0 +1,25 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-area {
+  flex: 1;
+  margin-left: var(--sidebar-w);
+  transition: margin-left 0.25s cubic-bezier(0.4,0,0.2,1);
+  min-width: 0;
+}
+
+.main-area.sidebar-collapsed {
+  margin-left: 60px;
+}
+
+.page-wrapper {
+  padding: calc(var(--topbar-h) + 24px) 24px 40px;
+  max-width: 1400px;
+}
+
+@media (max-width: 768px) {
+  .main-area { margin-left: 60px; }
+  .page-wrapper { padding: calc(var(--topbar-h) + 16px) 14px 32px; }
+}

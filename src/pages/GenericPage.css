@@ -1,0 +1,59 @@
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeUp 0.4s ease both;
+}
+
+.page-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.18s;
+}
+
+.page-card:hover { border-color: var(--border-strong); }
+
+/* Placeholder pages */
+.placeholder-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text-muted);
+}
+
+.placeholder-page .placeholder-icon {
+  font-size: 48px;
+  opacity: 0.4;
+}
+
+.placeholder-page h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.placeholder-page p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+/* Reuse chart-title / chart-sub here */
+.chart-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.chart-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
